@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ground tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Spikeball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Vertical.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Arrow.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/PlayerExample.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Finish.tscn" type="PackedScene" id=7]
+
+
+
+[node name="HowToPlay" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 11, 5, 0, 12, 1073741828, 0, 13, 1073741828, 0, 14, 1073741828, 0, 15, 1073741828, 0, 16, 1073741828, 0, 17, 1073741828, 0, 18, 1073741828, 0, 19, 5, 0, 65547, 5, 0, 65555, 5, 0, 131083, 5, 0, 131091, 5, 0, 196619, 5, 0, 196620, 4, 0, 196621, 4, 0, 196622, 4, 0, 196623, 4, 0, 196624, 4, 0, 196625, 4, 0, 196626, 4, 0, 196627, 5, 0, 262155, 1073741829, 0, 262156, 1073741828, 0, 262157, 1073741828, 0, 262158, 1073741828, 0, 262159, 1073741828, 0, 262160, 1073741828, 0, 262161, 1073741828, 0, 262162, 1073741828, 0, 262163, 1073741829, 0, 327680, 1073741829, 0, 327681, 1073741828, 0, 327682, 1073741828, 0, 327683, 1073741828, 0, 327684, 1073741828, 0, 327685, 1073741828, 0, 327686, 1073741828, 0, 327687, 1073741828, 0, 327688, 1073741828, 0, 327689, 1073741828, 0, 327690, 1073741828, 0, 327691, 1073741828, 0, 327699, 1073741829, 0, 393216, 1073741829, 0, 393235, 1073741829, 0, 458752, 1073741829, 0, 458766, 6, 0, 458771, 1073741829, 0, 524288, 1073741829, 0, 524302, 7, 0, 524307, 1073741829, 0, 589824, 1073741829, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 7, 0, 589839, 4, 0, 589840, 4, 0, 589841, 4, 0, 589842, 4, 0, 589843, 1073741829, 0 )
+
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 395.631, 76.119 )
+
+[node name="Spikeball" parent="." instance=ExtResource( 3 )]
+position = Vector2( 495.243, 79.878 )
+
+[node name="Spikeball3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 463.292, 208.622 )
+
+[node name="Vertical" parent="." instance=ExtResource( 4 )]
+position = Vector2( 589.218, 79.878 )
+
+[node name="Arrow" parent="." instance=ExtResource( 5 )]
+position = Vector2( 405.028, 46.0473 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 74.2395, 257.489 )
+
+[node name="Finish2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 544.11, 270.645 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_right = 355.0
+margin_bottom = 159.0
+text = "INSTRUCTIONS
+ - Press the Arrow keys to move your player
+ - Press the UP arrow key to jump
+ - Avoid the enemies or press TAB to shoot a fireball
+ - Enemies are shown to the right
+ - To complete the level, get to the gem -->
+ - Even hitting the enemies once will result in loss
+ - Hitting the gem will get you back to the title screen"
+
+[node name="Finish" parent="." instance=ExtResource( 7 )]
+position = Vector2( 294.139, 92.0946 )
